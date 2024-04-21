@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 env:
-  repository: create-ci/typos
+  repository: crate-ci/typos
   project: typos
 
 jobs:
