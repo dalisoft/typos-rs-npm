@@ -1,0 +1,6 @@
+.env
+commitlint
+.DS_Store
+node_modules
+typos
+bun.lockb

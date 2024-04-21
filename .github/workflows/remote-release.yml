@@ -1,0 +1,34 @@
+name: Remote fetch and apply release
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+env:
+  repository: create-ci/typos
+  project: typos
+
+jobs:
+  remote-release:
+    timeout-minutes: 5
+
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+          ref: master
+          persist-credentials: true
+          token: ${{ secrets.GH_TOKEN }}
+      - name: Run script for fetch, test and release
+        shell: bash
+        env:
+          GIT_USERNAME: ${{ vars.GIT_USERNAME }}
+          GIT_EMAIL: ${{ vars.GIT_EMAIL }}
+          GPG_KEY_ID: ${{ vars.GPG_KEY_ID }}
+          GPG_KEY: ${{ secrets.GPG_KEY }}
+          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: curl -fsSL https://raw.githubusercontent.com/dalisoft/ci-scripts/master/fetch-and-release-update.sh | sh
