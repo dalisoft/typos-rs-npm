@@ -2,7 +2,7 @@
 
 Source code spell checker
 
-> **npm** integration for [typos-rs](https://github.com/create-ci/typos) without any overhead so using full power of `typos-rs` CLI performance and feature
+> **npm** integration for [typos-rs](https://github.com/crate-ci/typos) without any overhead so using full power of `typos-rs` CLI performance and feature
 
 ## Documentations
 
