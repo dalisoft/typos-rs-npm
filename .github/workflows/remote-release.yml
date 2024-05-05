@@ -21,7 +21,7 @@ jobs:
           fetch-tags: true
           ref: master
           persist-credentials: true
-          token: ${{ secrets.GH_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Run script for fetch, test and release
         shell: bash
         env:
@@ -30,5 +30,5 @@ jobs:
           GPG_KEY_ID: ${{ vars.GPG_KEY_ID }}
           GPG_KEY: ${{ secrets.GPG_KEY }}
           GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: curl -fsSL https://raw.githubusercontent.com/dalisoft/ci-scripts/master/fetch-and-release-update.sh | sh
