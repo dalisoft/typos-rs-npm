@@ -4,3 +4,5 @@ commitlint
 node_modules
 typos
 bun.lockb
+doc
+LICENSE-*
