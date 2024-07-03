@@ -23,7 +23,7 @@
     "spell-checker"
   ],
   "dependencies": {
-    "binary2npm": "https://github.com/dalisoft/binary2npm#v0.3.8"
+    "binary2npm": "https://github.com/dalisoft/binary2npm#v0.4.0"
   },
   "repository": {
     "type": "git",
