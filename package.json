@@ -1,6 +1,6 @@
 {
   "name": "typos-rs-npm",
-  "version": "1.23.7",
+  "version": "1.24.1",
   "type": "module",
   "description": "Source code spell checker",
   "author": "Davlatjon Shavkatov <opensource@dalisoft.uz>, Ed Page",
